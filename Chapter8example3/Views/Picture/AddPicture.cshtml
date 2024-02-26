@@ -1,0 +1,42 @@
+﻿@model Chapter8example3.Models.Picture
+<h3>Add A picture</h3>
+
+<form asp-controller="Picture"
+      asp-action="AddPicture" method="post" class="form-horizontal" enctype="multipart/form-data">
+
+    <div class="form-group">
+        <label asp-for="AltAttribute"
+               class="control-label col-xs-2">alt attribute.</label>
+        <div class="col-xs-10">
+            <input asp-for="AltAttribute" class="form-control" />
+        </div>
+       </div>
+
+    <div class="form-group">
+        <label asp-for="Description"
+               class="control-label col-xs-2">Description:</label>
+        <div class="col-xs-10">
+            <input asp-for="Description" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="MyPicture"
+               class="control-label col-xs-2">Select a file to uload:</label>
+        <div class="col-xs-10">
+            <input type="file" class="file" name="MyPicture" />
+        </div>
+    </div>
+
+    
+  
+    <div class="form-group">
+        <div class="col-xs-offset-2 col-xs-10">
+            <button type="submit" class="btn btn-primary">Add Picture</button>
+        </div>
+
+    </div>
+
+
+
+</form>
